@@ -44,6 +44,5 @@ void opcontrol() {
 
     intakeL.move((controlR1 - controlY)*200);
     intakeR.move((controlR1 - controlY)*200);
-    //this is a test comment
   }
 }
