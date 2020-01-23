@@ -44,5 +44,31 @@ void opcontrol() {
 
     intakeL.move((controlR1 - controlY)*200);
     intakeR.move((controlR1 - controlY)*200);
+
+    driveL.move(leftY);
+    transL.move(leftY);
+    driveR.move(rightY);
+    transR.move(rightY);
+
+    if(controlL1){
+      transL.move(30);
+      transR.move(30);
+      driveL.move_velocity(0);
+      driveR.move_velocity(0);
+      driveL.set_brake_mode(E_MOTOR_BRAKE_HOLD);
+      driveR.set_brake_mode(E_MOTOR_BRAKE_HOLD);
+    }
+  else if(controlRight){
+      transL.move(-30);
+      transR.move(-30);
+      driveL.move_velocity(0);
+      driveR.move_velocity(0);
+      driveL.set_brake_mode(E_MOTOR_BRAKE_HOLD);
+      driveR.set_brake_mode(E_MOTOR_BRAKE_HOLD);
+    }
+    else{
+      driveL.set_brake_mode(E_MOTOR_BRAKE_COAST);
+      driveR.set_brake_mode(E_MOTOR_BRAKE_COAST);
+    }
   }
 }
