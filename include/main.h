@@ -16,6 +16,12 @@ void initialize(void);
 void disabled(void);
 void competition_initialize(void);
 void opcontrol(void);
+
+void tareMotors();
+void simultaneous(int dist, int speed);
+void autoTurn(char dir, int dist, int speed);
+void independent(char dir, int dist, int speed);
+
 #ifdef __cplusplus
 }
 #endif
@@ -24,4 +30,4 @@ void opcontrol(void);
 
 #endif
 
-#endif  
+#endif
