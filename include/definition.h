@@ -3,10 +3,10 @@
 
 extern pros::Controller master;
 
-extern pros::Motor transL;
-extern pros::Motor transR;
-extern pros::Motor driveL;
-extern pros::Motor driveR;
+extern pros::Motor driveBL;
+extern pros::Motor driveBR;
+extern pros::Motor driveFL;
+extern pros::Motor driveFR;
 extern pros::Motor intakeL;
 extern pros::Motor intakeR;
 extern pros::Motor liftL;
