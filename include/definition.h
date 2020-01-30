@@ -9,8 +9,8 @@ extern pros::Motor driveFL;
 extern pros::Motor driveFR;
 extern pros::Motor intakeL;
 extern pros::Motor intakeR;
-extern pros::Motor liftL;
-extern pros::Motor liftR;
+extern pros::Motor lift;
+extern pros::Motor angle;
 
 extern int leftY;
 extern int leftX;
