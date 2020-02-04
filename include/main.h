@@ -22,6 +22,12 @@ void simultaneous(int dist, int speed);
 void autoTurn(char dir, int dist, int speed);
 void independent(char dir, int dist, int speed);
 
+void doSkills();
+void doRed();
+void doBlue();
+void blueAuton();
+void redAuton();
+
 #ifdef __cplusplus
 }
 #endif

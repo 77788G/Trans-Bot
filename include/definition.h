@@ -29,3 +29,5 @@ extern bool controlL1;
 extern bool controlL2;
 extern bool controlR1;
 extern bool controlR2;
+
+extern int autoSelect;

@@ -3,6 +3,18 @@
 
 using namespace pros;
 
+void doBlue(){
+  autoSelect = 0;
+}
+
+void doSkills(){
+  autoSelect = 1;
+}
+
+void doRed(){
+  autoSelect = 2;
+}
+
 void tareMotors(){
   driveFL.tare_position();
   driveFR.tare_position();
