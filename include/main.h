@@ -21,6 +21,10 @@ void tareMotors();
 void simultaneous(int dist, int speed);
 void autoTurn(char dir, int dist, int speed);
 void independent(char dir, int dist, int speed);
+void liftPos(int height, int speed);
+void startIntake();
+void stopIntake();
+void deposit();
 
 void doSkills();
 void doRed();

@@ -73,3 +73,27 @@ void independent(char dir, int dist, int speed){
           fabs(driveBR.get_position() - dist) >= 25) delay(20);
   }
 }
+
+void liftPos(int height, int speed){
+    lift.move_absolute(height, speed);
+    while(fabs(driveFR.get_position() - height) >= 25) delay(20);
+}
+
+void startIntake(){
+  intakeL.move(200);
+  intakeR.move(200);
+}
+
+void stopIntake(){
+  intakeL.move(0);
+  intakeR.move(0);
+}
+
+void deposit(){
+  angle.move_absolute(3300, 100);
+  while(fabs(driveFR.get_position() - 3300) >= 25) delay(20);
+  angle.move_absolute(3800, 40);
+  while(fabs(driveFR.get_position() - 3800) >= 25) delay(20);
+  simultaneous(-400, 75);
+  angle.move_absolute(0, 100);
+}
