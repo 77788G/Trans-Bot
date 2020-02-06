@@ -3,6 +3,7 @@
 
 using namespace pros;
 
+int autoSelect;
 void initialize() {
   autoSelect = 1;
   angle.set_brake_mode(E_MOTOR_BRAKE_HOLD);
