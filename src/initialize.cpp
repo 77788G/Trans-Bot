@@ -16,6 +16,8 @@ void initialize() {
   lcd::register_btn0_cb(doBlue);
   lcd::register_btn1_cb(layerAdvance);
   lcd::register_btn2_cb(doRed);
+
+  lcd::print(0, "HORSE ROBOTICS");
 }
 
 void competition_initialize() {}
