@@ -3,4 +3,13 @@
 
 using namespace pros;
 
-void redAuton(){}
+void redAuton(){
+  if(autoLayer == 0){
+    simultaneous(600, 100);
+    simultaneous(-600, 100);
+  }
+  else{
+    simultaneous(-600, 100);
+    simultaneous(600, 100);
+  }
+}

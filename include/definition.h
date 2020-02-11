@@ -31,3 +31,4 @@ extern bool controlR1;
 extern bool controlR2;
 
 extern int autoSelect;
+extern int autoLayer;

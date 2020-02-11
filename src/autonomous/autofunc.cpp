@@ -8,11 +8,16 @@ void doBlue(){
 }
 
 void doSkills(){
-  autoSelect = 1;
+  autoSelect = 2;
 }
 
 void doRed(){
-  autoSelect = 2;
+  autoSelect = 1;
+}
+
+void layerAdvance(){
+  if (autoLayer == 2) autoLayer = 0;
+  else autoLayer += 1;
 }
 
 void tareMotors(){

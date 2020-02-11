@@ -31,6 +31,8 @@ void doRed();
 void doBlue();
 void blueAuton();
 void redAuton();
+void skillsAuton();
+void layerAdvance();
 
 #ifdef __cplusplus
 }

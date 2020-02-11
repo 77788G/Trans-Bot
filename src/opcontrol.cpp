@@ -43,12 +43,17 @@ void opcontrol() {
 
     if(angle.get_position() < 0) angle.move(40);
     else if(controlRight) angle.move(-100);
-    else if(angle.get_position() < 1300) angle.move((controlL1) * 100);
-    else if(angle.get_position() < 3300) angle.move(controlL1 * 40);
+    else if(controlL1) angle.move_velocity((-angle.get_position() + 5000) * 6.283); 
+    /* else if(angle.get_position() < 1300) angle.move_velocity((controlL1) * 600);
+    else if(angle.get_position() < 3500) angle.move_velocity((controlL1) * 480);
+    else if(angle.get_position() < 4000) angle.move_velocity(controlL1 * 240); */
     else angle.move(-40);
 
     intakeL.move((controlR1 - controlY)*200);
     intakeR.move((controlR1 - controlY)*200);
+
+    intakeL.move((controlL1)*50);
+    intakeR.move((controlL1)*50);
 
     driveFL.move(leftY);
     driveBL.move(leftY);
