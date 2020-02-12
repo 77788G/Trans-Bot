@@ -39,27 +39,21 @@ void simultaneous(int dist, int speed){
           fabs(driveBR.get_position() - dist) >= 25) delay(20);
 }
 
-void autoTurn(char dir, int dist, int speed){
+void autoTurn(char dir, int rot, int speed){
   tareMotors();
   if(dir == 'L'){
-    driveFR.move_relative(dist, speed);
-    driveFL.move_relative(-dist, speed);
-    driveBR.move_relative(dist, speed);
-    driveBL.move_relative(-dist, speed);
-    while(fabs(driveFL.get_position() + dist) >= 25 ||
-          fabs(driveFR.get_position() - dist) >= 25 ||
-          fabs(driveBL.get_position() + dist) >= 25 ||
-          fabs(driveBR.get_position() - dist) >= 25) delay(20);
+    driveFR.move(speed);
+    driveFL.move(-speed);
+    driveBR.move(speed);
+    driveBL.move(-speed);
+    while(fabs(inertia.get_rotation() - rot) >= 5) delay(20);
   }
   else{
-    driveFR.move_relative(-dist, speed);
-    driveFL.move_relative(dist, speed);
-    driveBR.move_relative(-dist, speed);
-    driveBL.move_relative(dist, speed);
-    while(fabs(driveFL.get_position() - dist) >= 25 ||
-          fabs(driveFR.get_position() + dist) >= 25 ||
-          fabs(driveBL.get_position() - dist) >= 25 ||
-          fabs(driveBR.get_position() + dist) >= 25) delay(20);
+    driveFR.move(-speed);
+    driveFL.move(speed);
+    driveBR.move(-speed);
+    driveBL.move(speed);
+    while(fabs(inertia.get_rotation() - rot) >= 5) delay(20);
   }
 }
 

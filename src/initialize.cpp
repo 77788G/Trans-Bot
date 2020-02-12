@@ -8,6 +8,7 @@ int autoLayer = 0;
 void initialize() {
   lcd::initialize();
 
+  inertia.reset();
   angle.set_brake_mode(E_MOTOR_BRAKE_HOLD);
   lift.set_brake_mode(E_MOTOR_BRAKE_HOLD);
   intakeL.set_brake_mode(E_MOTOR_BRAKE_HOLD);

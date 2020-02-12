@@ -12,6 +12,8 @@ extern pros::Motor intakeR;
 extern pros::Motor lift;
 extern pros::Motor angle;
 
+extern pros::Imu inertia;
+
 extern int leftY;
 extern int leftX;
 extern int rightY;
